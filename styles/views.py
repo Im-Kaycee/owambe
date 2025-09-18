@@ -9,8 +9,23 @@ class StyleListCreateView(generics.ListCreateAPIView):
     authentication_classes = [JWTAuthentication]
     permission_classes = [permissions.IsAuthenticated]
     throttle_classes = [UserRateThrottle]
+    
     def perform_create(self, serializer):
-        serializer.save(uploader=self.request.user)
+        tailor_username = self.request.data.get('tailor_username')
+        tailor_user = None
+        
+        if tailor_username:
+            try:
+                from accounts.models import User
+                tailor_user = User.objects.get(username=tailor_username)
+            except User.DoesNotExist:
+                # If tailor username doesn't exist, we'll just set the name fields
+                pass
+        
+        serializer.save(
+            uploader=self.request.user,
+            tailor_user=tailor_user
+        )
 
 class StyleDetailView(generics.RetrieveAPIView):
     queryset = Style.objects.all()
@@ -19,24 +34,38 @@ class StyleDetailView(generics.RetrieveAPIView):
     permission_classes = [permissions.AllowAny]
     lookup_field = 'slug'
 
-# Add Update and Delete views
 class StyleUpdateView(generics.UpdateAPIView):
     queryset = Style.objects.all()
     serializer_class = StyleSerializer
     authentication_classes = [JWTAuthentication]
     permission_classes = [permissions.IsAuthenticated]
     throttle_classes = [UserRateThrottle]
+    lookup_field = 'slug'
 
     def get_queryset(self):
-        # Users can only update their own styles
         return Style.objects.filter(uploader=self.request.user)
-
+    
+    def perform_update(self, serializer):
+        tailor_username = self.request.data.get('tailor_username')
+        tailor_user = None
+        
+        if tailor_username:
+            try:
+                from accounts.models import User
+                tailor_user = User.objects.get(username=tailor_username)
+            except User.DoesNotExist:
+                # If tailor username doesn't exist, set to None
+                tailor_user = None
+        
+        # Save with the found tailor user or None if not found
+        serializer.save(tailor_user=tailor_user)
 class StyleDeleteView(generics.DestroyAPIView):
     queryset = Style.objects.all()
     serializer_class = StyleSerializer
     authentication_classes = [JWTAuthentication]
     permission_classes = [permissions.IsAuthenticated]
     throttle_classes = [UserRateThrottle]
+    lookup_field = 'slug'
 
     def get_queryset(self):
         # Users can only delete their own styles

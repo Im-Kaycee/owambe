@@ -6,7 +6,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework_simplejwt.authentication import JWTAuthentication
 from rest_framework.throttling import AnonRateThrottle, UserRateThrottle
 from rest_framework.throttling import ScopedRateThrottle
-
+from .throttles import *
 from rest_framework.authentication import TokenAuthentication
 # views.py
 from rest_framework import status
@@ -16,7 +16,7 @@ class RegisterView(generics.CreateAPIView):
     queryset = User.objects.all()
     permission_classes = [permissions.AllowAny]
     serializer_class = UserSerializer
-    throttle_classes = [AnonRateThrottle]
+    throttle_classes = [RegisterThrottle]
     throttle_scope = 'register'
 
     def create(self, request, *args, **kwargs):
@@ -38,6 +38,12 @@ class UserDetailView(generics.RetrieveUpdateAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
     permission_classes = [IsAuthenticated]
+    def update(self, request, *args, **kwargs):
+        # Handle file uploads properly
+        if 'profile_picture' in request.FILES:
+            # Process the file upload
+            pass
+        return super().update(request, *args, **kwargs)
 
     def get_object(self):
         return self.request.user
