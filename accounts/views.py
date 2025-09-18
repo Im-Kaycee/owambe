@@ -4,6 +4,8 @@ from .serializers import UserSerializer
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
 from rest_framework_simplejwt.authentication import JWTAuthentication
+from rest_framework.throttling import AnonRateThrottle, UserRateThrottle
+from rest_framework.throttling import ScopedRateThrottle
 
 from rest_framework.authentication import TokenAuthentication
 # views.py
@@ -14,6 +16,8 @@ class RegisterView(generics.CreateAPIView):
     queryset = User.objects.all()
     permission_classes = [permissions.AllowAny]
     serializer_class = UserSerializer
+    throttle_classes = [AnonRateThrottle]
+    throttle_scope = 'register'
 
     def create(self, request, *args, **kwargs):
         # First, create the user using the parent class logic
@@ -146,12 +150,13 @@ class UserDeleteView(APIView):
         # 4. Clean up social auth if you're using it
         # social_accounts = user.socialaccount_set.all()
         # social_accounts.delete()
-from rest_framework.decorators import api_view, permission_classes, authentication_classes
+from rest_framework.decorators import api_view, permission_classes, authentication_classes, throttle_classes
 from rest_framework_simplejwt.authentication import JWTAuthentication
-        
+from .throttles import ChangePasswordThrottle
 @api_view(['POST'])
 @authentication_classes([JWTAuthentication])
 @permission_classes([IsAuthenticated])
+@throttle_classes ([ChangePasswordThrottle])
 def change_password(request):
     new_password = request.data.get('new_password')
     confirm_password = request.data.get('confirm_password')
@@ -178,3 +183,32 @@ def change_password(request):
     request.user.save()
     
     return Response({"message": "Password updated successfully"})
+# Add to accounts/views.py
+from rest_framework.decorators import api_view, authentication_classes, permission_classes
+from rest_framework.response import Response
+from django.shortcuts import get_object_or_404
+
+@api_view(['GET'])
+@authentication_classes([JWTAuthentication])
+@permission_classes([permissions.AllowAny])
+def user_profile(request, username):
+    """
+    Get user profile by username
+    """
+    user = get_object_or_404(User, username=username)
+    
+    # Get user stats
+    from styles.models import Style
+    from boards.models import Board
+    
+    stats = {
+        'styles_count': Style.objects.filter(uploader=user).count(),
+        'boards_count': Board.objects.filter(owner=user).count(),
+        # Add more stats as needed
+    }
+    
+    serializer = UserSerializer(user)
+    data = serializer.data
+    data['stats'] = stats
+    
+    return Response(data)

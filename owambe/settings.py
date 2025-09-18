@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'rest_framework_simplejwt',
+    'drf_spectacular',
+    'whitenoise',
     'corsheaders',
     'accounts',
     'boards',
@@ -63,9 +65,30 @@ REST_FRAMEWORK = {
     ),
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.IsAuthenticated',
-    )
+    ),
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+    'DEFAULT_THROTTLE_CLASSES': [
+       'rest_framework.throttling.ScopedRateThrottle',
+    ],
+    'DEFAULT_THROTTLE_RATES': {
+        'anon': '100/day',  # 100 requests per day for anonymous users
+        'user': '1000/day',  # 1000 requests per day for authenticated users
+        'login': '5/hour',   # Special rate for login attempts
+        'register': '10/day', # Special rate for registrations
+        'change_password': '3/hour',
+        'general': '1000/day',
+    }
 }
-
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'Owambe API',
+    'DESCRIPTION': 'African fashion style sharing platform API',
+    'VERSION': '1.0.0',
+    'SERVE_INCLUDE_SCHEMA': False,
+    'SCHEMA_PATH_PREFIX': '/api/',
+    'AUTHENTICATION_CLASSES': [
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ],
+}
 # JWT Settings
 from datetime import timedelta
 
@@ -154,7 +177,16 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 CORS_ALLOW_ALL_ORIGINS = True  
+# Make sure to include credentials
+CORS_ALLOW_CREDENTIALS = True
 
+# Also add CSRF trusted origins
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:8080",
+   
+]
+# Important for mobile and ngrok
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 # Media
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
