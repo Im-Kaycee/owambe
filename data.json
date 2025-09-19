@@ -1,0 +1,1044 @@
+[
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "authtoken",
+        "model": "token"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "authtoken",
+        "model": "tokenproxy"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "accounts",
+        "model": "user"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "boards",
+        "model": "board"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "styles",
+        "model": "style"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "013k0cwyj2f913ir5xt488dcrdqerkuq",
+    "fields": {
+        "session_data": ".eJxVjEsOAiEQBe_C2hCwAcGle89AuqGRUQPJfFbGuyvJLHT7quq9RMRtrXFbeI5TFmdhxOF3I0wPbgPkO7Zbl6m3dZ5IDkXudJHXnvl52d2_g4pL_dZARuvikya0wIossso-oCvuyMpbAAYwiQBAD1ayAziFFGw22icU7w_kCDfB:1uy5Px:tTQizuJqEQheCpkJMryw2JvlybDpBNpeKA3POGJ7zZk",
+        "expire_date": "2025-09-29T09:22:37.292Z"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "view_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add Token",
+        "content_type": [
+            "authtoken",
+            "token"
+        ],
+        "codename": "add_token"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change Token",
+        "content_type": [
+            "authtoken",
+            "token"
+        ],
+        "codename": "change_token"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete Token",
+        "content_type": [
+            "authtoken",
+            "token"
+        ],
+        "codename": "delete_token"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view Token",
+        "content_type": [
+            "authtoken",
+            "token"
+        ],
+        "codename": "view_token"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add Token",
+        "content_type": [
+            "authtoken",
+            "tokenproxy"
+        ],
+        "codename": "add_tokenproxy"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change Token",
+        "content_type": [
+            "authtoken",
+            "tokenproxy"
+        ],
+        "codename": "change_tokenproxy"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete Token",
+        "content_type": [
+            "authtoken",
+            "tokenproxy"
+        ],
+        "codename": "delete_tokenproxy"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view Token",
+        "content_type": [
+            "authtoken",
+            "tokenproxy"
+        ],
+        "codename": "view_tokenproxy"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add user",
+        "content_type": [
+            "accounts",
+            "user"
+        ],
+        "codename": "add_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change user",
+        "content_type": [
+            "accounts",
+            "user"
+        ],
+        "codename": "change_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete user",
+        "content_type": [
+            "accounts",
+            "user"
+        ],
+        "codename": "delete_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view user",
+        "content_type": [
+            "accounts",
+            "user"
+        ],
+        "codename": "view_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add board",
+        "content_type": [
+            "boards",
+            "board"
+        ],
+        "codename": "add_board"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change board",
+        "content_type": [
+            "boards",
+            "board"
+        ],
+        "codename": "change_board"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete board",
+        "content_type": [
+            "boards",
+            "board"
+        ],
+        "codename": "delete_board"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view board",
+        "content_type": [
+            "boards",
+            "board"
+        ],
+        "codename": "view_board"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add style",
+        "content_type": [
+            "styles",
+            "style"
+        ],
+        "codename": "add_style"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change style",
+        "content_type": [
+            "styles",
+            "style"
+        ],
+        "codename": "change_style"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete style",
+        "content_type": [
+            "styles",
+            "style"
+        ],
+        "codename": "delete_style"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view style",
+        "content_type": [
+            "styles",
+            "style"
+        ],
+        "codename": "view_style"
+    }
+},
+{
+    "model": "accounts.user",
+    "fields": {
+        "password": "pbkdf2_sha256$1000000$u4BpIuM94mEE2s9Ptkwni8$WdYhNYJz4/g3F6V96KZYK39+49k1eItOrQ0DojmudZI=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "kaycee",
+        "first_name": "",
+        "last_name": "",
+        "email": "test@example.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-09-12T21:17:19Z",
+        "role": "tailor",
+        "bio": "Python Developer | I get bored and build things | Sharing my journey of building my imaginations into reality",
+        "profile_picture": "profiles/me_FQIqphz.jpg",
+        "whatsapp_number": "+2347066112505",
+        "twitter": "https://x.com/nulfacedesigner/",
+        "instagram": "https://instagram.com/i_am.kaycee/",
+        "facebook": null,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "accounts.user",
+    "fields": {
+        "password": "pbkdf2_sha256$1000000$MpokujKe7u24OTWX3XP6xr$oP1FsGjf1Tdrf1YBCVfTKRTvRRE4n9ShAwkK5O3vlQQ=",
+        "last_login": "2025-09-15T09:22:37.287Z",
+        "is_superuser": true,
+        "username": "owambe_admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "favour@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-09-15T09:22:20.798Z",
+        "role": "user",
+        "bio": null,
+        "profile_picture": "",
+        "whatsapp_number": null,
+        "twitter": null,
+        "instagram": null,
+        "facebook": null,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "accounts.user",
+    "fields": {
+        "password": "pbkdf2_sha256$1000000$9o1rGZiK97hEUdivjtjO2G$VJfYafW8bq/S7Ia+9+2iVlFfXfoLmXPel0z8FIAKZfE=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "slime_demon",
+        "first_name": "",
+        "last_name": "",
+        "email": "favourkeke60@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-09-18T01:20:33.912Z",
+        "role": "user",
+        "bio": "",
+        "profile_picture": "",
+        "whatsapp_number": null,
+        "twitter": null,
+        "instagram": null,
+        "facebook": null,
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "boards.board",
+    "pk": 4,
+    "fields": {
+        "owner": [
+            "kaycee"
+        ],
+        "name": "Male Fashion Board",
+        "description": "Fashion styles for the next party I'm attending",
+        "slug": "male-fashion-board",
+        "created_at": "2025-09-18T13:31:48.713Z",
+        "updated_at": "2025-09-18T13:31:48.713Z",
+        "styles": [
+            11,
+            3
+        ]
+    }
+},
+{
+    "model": "boards.board",
+    "pk": 6,
+    "fields": {
+        "owner": [
+            "kaycee"
+        ],
+        "name": "Umuada Styles",
+        "description": "",
+        "slug": "umuada-styles",
+        "created_at": "2025-09-19T13:46:33.980Z",
+        "updated_at": "2025-09-19T13:46:33.980Z",
+        "styles": [
+            16,
+            6
+        ]
+    }
+},
+{
+    "model": "styles.style",
+    "pk": 3,
+    "fields": {
+        "uploader": [
+            "kaycee"
+        ],
+        "title": "Black Owambe Wear",
+        "slug": "black-owambe-wear",
+        "image": "styles/14acc2c17837f7ba885f62fb6e2d399f.jpg",
+        "category": "men",
+        "fabric_type": "Cotton",
+        "occasion": "Wedding",
+        "colour": "Black",
+        "tailor_name": "Kelechuwku",
+        "tailor_whatsapp": "+2347066112505",
+        "tailor_user": [
+            "owambe_admin"
+        ],
+        "created_at": "2025-09-15T15:46:54.619Z"
+    }
+},
+{
+    "model": "styles.style",
+    "pk": 4,
+    "fields": {
+        "uploader": [
+            "kaycee"
+        ],
+        "title": "Stylish Native Wear",
+        "slug": "stylish-native-wear",
+        "image": "styles/04bb10ccba71d2ee0a71cee39232ad37_zxcrpzr.jpg",
+        "category": "men",
+        "fabric_type": "Cotton",
+        "occasion": "Church",
+        "colour": "Green",
+        "tailor_name": "Kelechukwu",
+        "tailor_whatsapp": "+2347066112505",
+        "tailor_user": [
+            "kaycee"
+        ],
+        "created_at": "2025-09-15T15:57:39.977Z"
+    }
+},
+{
+    "model": "styles.style",
+    "pk": 5,
+    "fields": {
+        "uploader": [
+            "kaycee"
+        ],
+        "title": "Pink Japanese Kimono",
+        "slug": "pink-japanese-kimono",
+        "image": "styles/SnapInsta.to_532172966_17856461199485150_5153975727907762128_n.jpg",
+        "category": "women",
+        "fabric_type": "Silk",
+        "occasion": "Wedding",
+        "colour": "Pink",
+        "tailor_name": "Nezuko",
+        "tailor_whatsapp": "+23450382816384",
+        "tailor_user": null,
+        "created_at": "2025-09-18T07:46:16.967Z"
+    }
+},
+{
+    "model": "styles.style",
+    "pk": 6,
+    "fields": {
+        "uploader": [
+            "kaycee"
+        ],
+        "title": "Green Owambe Dress",
+        "slug": "green-owambe-dress",
+        "image": "styles/43699239b59f2b5e83bbda97b3627126.jpg",
+        "category": "women",
+        "fabric_type": "Lace",
+        "occasion": "Owambe",
+        "colour": "Green",
+        "tailor_name": "Amarah by Azarah",
+        "tailor_whatsapp": "+234509577829",
+        "tailor_user": [
+            "owambe_admin"
+        ],
+        "created_at": "2025-09-18T09:24:08.525Z"
+    }
+},
+{
+    "model": "styles.style",
+    "pk": 7,
+    "fields": {
+        "uploader": [
+            "owambe_admin"
+        ],
+        "title": "Purple Wedding Gown",
+        "slug": "purple-wedding-gown",
+        "image": "styles/d253ae257126c767423ea982651fcdb5.jpg",
+        "category": "women",
+        "fabric_type": "Lace",
+        "occasion": "Wedding",
+        "colour": "Purple",
+        "tailor_name": "Ngozi Stitches",
+        "tailor_whatsapp": "+2347066112505",
+        "tailor_user": [
+            "kaycee"
+        ],
+        "created_at": "2025-09-18T09:50:57.259Z"
+    }
+},
+{
+    "model": "styles.style",
+    "pk": 9,
+    "fields": {
+        "uploader": [
+            "kaycee"
+        ],
+        "title": "Yoruba Native Wear",
+        "slug": "yoruba-native-wear",
+        "image": "styles/d64b04fff527a12846f59e03efae1019_KmG8Zsg.jpg",
+        "category": "kids",
+        "fabric_type": "Cotton",
+        "occasion": "Birthday",
+        "colour": "Blue",
+        "tailor_name": "",
+        "tailor_whatsapp": "",
+        "tailor_user": null,
+        "created_at": "2025-09-18T14:38:31.169Z"
+    }
+},
+{
+    "model": "styles.style",
+    "pk": 10,
+    "fields": {
+        "uploader": [
+            "kaycee"
+        ],
+        "title": "Corporate Suit",
+        "slug": "corporate-suit",
+        "image": "styles/27685a4394116c5dda4047eef5df157b.jpg",
+        "category": "men",
+        "fabric_type": "Cotton",
+        "occasion": "Dinner",
+        "colour": "Green",
+        "tailor_name": "Louis Vuitton",
+        "tailor_whatsapp": "+234590228836",
+        "tailor_user": null,
+        "created_at": "2025-09-18T14:42:31.258Z"
+    }
+},
+{
+    "model": "styles.style",
+    "pk": 11,
+    "fields": {
+        "uploader": [
+            "kaycee"
+        ],
+        "title": "Wine Double-Breasted Set",
+        "slug": "wine-double-breasted-set",
+        "image": "styles/88353dc79f8c1bd419e871cbab895a99.jpg",
+        "category": "men",
+        "fabric_type": "Cotton",
+        "occasion": "Wedding Party",
+        "colour": "Wine",
+        "tailor_name": "Kelechukwu",
+        "tailor_whatsapp": "+2347066112505",
+        "tailor_user": [
+            "kaycee"
+        ],
+        "created_at": "2025-09-18T14:45:07.781Z"
+    }
+},
+{
+    "model": "styles.style",
+    "pk": 12,
+    "fields": {
+        "uploader": [
+            "kaycee"
+        ],
+        "title": "Blue and White Elegant Suit",
+        "slug": "blue-and-white-elegant-suit",
+        "image": "styles/9db8b33cb26ca531c9f0e12c5439c179.jpg",
+        "category": "men",
+        "fabric_type": "Polyester",
+        "occasion": "Dinner",
+        "colour": "Blue and White",
+        "tailor_name": "",
+        "tailor_whatsapp": "",
+        "tailor_user": null,
+        "created_at": "2025-09-18T14:49:06.394Z"
+    }
+},
+{
+    "model": "styles.style",
+    "pk": 13,
+    "fields": {
+        "uploader": [
+            "kaycee"
+        ],
+        "title": "Beige Corporate Suit",
+        "slug": "beige-corporate-suit",
+        "image": "styles/b9a4435887987c89f61fb96964db89e3.jpg",
+        "category": "men",
+        "fabric_type": "Polyester",
+        "occasion": "Party",
+        "colour": "Brown and Beige",
+        "tailor_name": "",
+        "tailor_whatsapp": "",
+        "tailor_user": null,
+        "created_at": "2025-09-18T14:50:25.182Z"
+    }
+},
+{
+    "model": "styles.style",
+    "pk": 14,
+    "fields": {
+        "uploader": [
+            "kaycee"
+        ],
+        "title": "Formal outfit",
+        "slug": "formal-outfit",
+        "image": "styles/2fb69f73354d30a48aa45cc2c6207cef.jpg",
+        "category": "men",
+        "fabric_type": "Polyester",
+        "occasion": "Wine Party",
+        "colour": "Brown",
+        "tailor_name": "Umuada Stitches",
+        "tailor_whatsapp": "",
+        "tailor_user": null,
+        "created_at": "2025-09-18T14:51:52.791Z"
+    }
+},
+{
+    "model": "styles.style",
+    "pk": 15,
+    "fields": {
+        "uploader": [
+            "kaycee"
+        ],
+        "title": "Aso Oke",
+        "slug": "aso-oke",
+        "image": "styles/IMG-20230827-WA0009.jpg",
+        "category": "women",
+        "fabric_type": "Aso Oke",
+        "occasion": "Traditional Wedding",
+        "colour": "Red",
+        "tailor_name": "Ashabi",
+        "tailor_whatsapp": "+2348037142322",
+        "tailor_user": null,
+        "created_at": "2025-09-18T17:33:46.514Z"
+    }
+},
+{
+    "model": "styles.style",
+    "pk": 16,
+    "fields": {
+        "uploader": [
+            "kaycee"
+        ],
+        "title": "African Aso Oke Boubou Gown",
+        "slug": "african-aso-oke-boubou-gown",
+        "image": "styles/6e213e8b1bb96dc580e1336a8c956590.jpg",
+        "category": "women",
+        "fabric_type": "Aso Oke",
+        "occasion": "Birthday",
+        "colour": "Brown",
+        "tailor_name": "Kelechukwu",
+        "tailor_whatsapp": "+2347066112505",
+        "tailor_user": [
+            "kaycee"
+        ],
+        "created_at": "2025-09-18T17:37:35.382Z"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2025-09-15T09:24:18.768Z",
+        "user": [
+            "owambe_admin"
+        ],
+        "content_type": [
+            "styles",
+            "style"
+        ],
+        "object_id": "1",
+        "object_repr": "Elegant Ankara Gown - Updated by kaycee",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2025-09-16T11:31:18.115Z",
+        "user": [
+            "owambe_admin"
+        ],
+        "content_type": [
+            "styles",
+            "style"
+        ],
+        "object_id": "3",
+        "object_repr": "Signout Wear by kaycee",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Tailor whatsapp\", \"Tailor user\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2025-09-16T11:36:24.821Z",
+        "user": [
+            "owambe_admin"
+        ],
+        "content_type": [
+            "styles",
+            "style"
+        ],
+        "object_id": "4",
+        "object_repr": "Stylish Dinner Dress by kaycee",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Tailor user\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2025-09-16T11:36:34.803Z",
+        "user": [
+            "owambe_admin"
+        ],
+        "content_type": [
+            "styles",
+            "style"
+        ],
+        "object_id": "4",
+        "object_repr": "Stylish Dinner Dress by kaycee",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2025-09-17T18:33:45.160Z",
+        "user": [
+            "owambe_admin"
+        ],
+        "content_type": [
+            "accounts",
+            "user"
+        ],
+        "object_id": "3",
+        "object_repr": "kaycee",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Role\", \"Profile picture\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2025-09-18T09:15:46.545Z",
+        "user": [
+            "owambe_admin"
+        ],
+        "content_type": [
+            "styles",
+            "style"
+        ],
+        "object_id": "5",
+        "object_repr": "Pink Japanese Kimono by kaycee",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2025-09-19T15:06:08.664Z",
+        "user": [
+            "owambe_admin"
+        ],
+        "content_type": [
+            "accounts",
+            "user"
+        ],
+        "object_id": "11",
+        "object_repr": "kaycee2",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2025-09-19T15:22:12.879Z",
+        "user": [
+            "owambe_admin"
+        ],
+        "content_type": [
+            "accounts",
+            "user"
+        ],
+        "object_id": "12",
+        "object_repr": "Sonia",
+        "action_flag": 3,
+        "change_message": ""
+    }
+}
+]
