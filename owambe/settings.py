@@ -31,7 +31,7 @@ if ENVIRONMENT == 'development':
 else:
     DEBUG = False
 
-ALLOWED_HOSTS = ['https://owambe-production.up.railway.app', 'localhost', 'owambe-production.up.railway.app']
+ALLOWED_HOSTS = ['https://owambe-production.up.railway.app', 'localhost', 'owambe-production.up.railway.app',"https://owambe-styles-connect.vercel.app/", 'owambe-styles-connect.vercel.app']
 
 
 # Application definition
@@ -212,7 +212,8 @@ CORS_ALLOW_CREDENTIALS = True
 # Also add CSRF trusted origins
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:8080",
-    "https://owambe-production.up.railway.app"
+    "https://owambe-production.up.railway.app",
+    "https://owambe-styles-connect.vercel.app/"
    
 ]
 # Important for mobile and ngrok
