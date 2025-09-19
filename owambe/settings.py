@@ -31,8 +31,30 @@ if ENVIRONMENT == 'development':
 else:
     DEBUG = False
 
-ALLOWED_HOSTS = ['https://owambe-production.up.railway.app', 'localhost', 'owambe-production.up.railway.app',"https://owambe-styles-connect.vercel.app/", 'owambe-styles-connect.vercel.app']
-
+ALLOWED_HOSTS = ['https://owambe-production.up.railway.app', 'localhost', 'owambe-production.up.railway.app',"https://owambe-styles-connect.vercel.app", 'owambe-styles-connect.vercel.app'] 
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:8080",
+    "https://owambe-production.up.railway.app",
+    "https://owambe-styles-connect.vercel.app"
+]
+CORS_ALLOW_METHODS = [
+    "GET",
+    "POST",
+    "PUT",
+    "PATCH",
+    "DELETE",
+    "OPTIONS"
+]
+# Make sure to include credentials
+CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_ALL_ORIGINS = True 
+# Also add CSRF trusted origins
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:8080",
+    "https://owambe-production.up.railway.app",
+    "https://owambe-styles-connect.vercel.app"
+   
+]
 
 # Application definition
 
@@ -193,30 +215,7 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'   # Where collectstatic gathers them
 
 
 
-CORS_ALLOW_ALL_ORIGINS = False  
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:8080",
-    "https://owambe-production.up.railway.app",
-    "https://owambe-styles-connect.vercel.app/"
-]
-CORS_ALLOW_METHODS = [
-    "GET",
-    "POST",
-    "PUT",
-    "PATCH",
-    "DELETE",
-    "OPTIONS"
-]
-# Make sure to include credentials
-CORS_ALLOW_CREDENTIALS = True
 
-# Also add CSRF trusted origins
-CSRF_TRUSTED_ORIGINS = [
-    "http://localhost:8080",
-    "https://owambe-production.up.railway.app",
-    "https://owambe-styles-connect.vercel.app/"
-   
-]
 # Important for mobile and ngrok
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 # Media
