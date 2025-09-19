@@ -31,7 +31,7 @@ if ENVIRONMENT == 'development':
 else:
     DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['https://owambe-production.up.railway.app', 'localhost', 'owambe-production.up.railway.app']
 
 
 # Application definition
@@ -193,13 +193,26 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'   # Where collectstatic gathers them
 
 
 
-CORS_ALLOW_ALL_ORIGINS = True  
+CORS_ALLOW_ALL_ORIGINS = False  
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:8080",
+    "https://owambe-production.up.railway.app"
+]
+CORS_ALLOW_METHODS = [
+    "GET",
+    "POST",
+    "PUT",
+    "PATCH",
+    "DELETE",
+    "OPTIONS"
+]
 # Make sure to include credentials
 CORS_ALLOW_CREDENTIALS = True
 
 # Also add CSRF trusted origins
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:8080",
+    "https://owambe-production.up.railway.app"
    
 ]
 # Important for mobile and ngrok
