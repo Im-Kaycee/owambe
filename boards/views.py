@@ -110,20 +110,20 @@ def add_style_to_board(request, board_slug):
             status=status.HTTP_404_NOT_FOUND
         )
 
-@api_view(['POST'])
+@api_view(['DELETE'])
 @authentication_classes([JWTAuthentication])
 @permission_classes([permissions.IsAuthenticated])
 def remove_style_from_board(request, board_slug):
     try:
-        # Get the board (user must own it)
+       
         board = Board.objects.get(slug=board_slug, owner=request.user)
         
-        # Validate input
+        
         serializer = BoardStyleSerializer(data=request.data)
         if not serializer.is_valid():
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         
-        # Get the style
+        
         style_slug = serializer.validated_data['style_slug']
         try:
             style = Style.objects.get(slug=style_slug)
@@ -133,7 +133,7 @@ def remove_style_from_board(request, board_slug):
                 status=status.HTTP_404_NOT_FOUND
             )
         
-        # Remove style from board
+        
         board.styles.remove(style)
         
         return Response({
