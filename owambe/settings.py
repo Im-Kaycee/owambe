@@ -196,7 +196,8 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'   # Where collectstatic gathers them
 CORS_ALLOW_ALL_ORIGINS = False  
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:8080",
-    "https://owambe-production.up.railway.app"
+    "https://owambe-production.up.railway.app",
+    "https://owambe-styles-connect.vercel.app/"
 ]
 CORS_ALLOW_METHODS = [
     "GET",
