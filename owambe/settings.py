@@ -205,6 +205,7 @@ CSRF_TRUSTED_ORIGINS = [
 # Important for mobile and ngrok
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 # Media
+
 MEDIA_URL = '/media/'
 if ENVIRONMENT == 'development':
     MEDIA_ROOT = BASE_DIR / 'media'
