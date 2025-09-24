@@ -3,6 +3,24 @@ from rest_framework_simplejwt.authentication import JWTAuthentication
 from .models import Style
 from .serializers import StyleSerializer
 from rest_framework.throttling import AnonRateThrottle, UserRateThrottle
+from rest_framework.pagination import PageNumberPagination
+from rest_framework.response import Response
+
+class StylePagination(PageNumberPagination):
+    page_size = 20  # Number of items per page
+    page_size_query_param = 'page_size'
+    max_page_size = 100
+    
+    def get_paginated_response(self, data):
+        return Response({
+            'count': self.page.paginator.count,
+            'next': self.get_next_link(),
+            'previous': self.get_previous_link(),
+            'results': data,
+            'total_pages': self.page.paginator.num_pages,
+            'current_page': self.page.number
+        })
+
 class StyleListCreateView(generics.ListCreateAPIView):
     queryset = Style.objects.all().order_by('-created_at')
     serializer_class = StyleSerializer
@@ -80,10 +98,11 @@ from django.db.models import Q
 @permission_classes([permissions.AllowAny])
 def style_search(request):
     """
-    Search styles by title, category, fabric, occasion, or color
+    Search styles with pagination support
     """
     query = request.GET.get('q', '')
     category = request.GET.get('category', '')
+    page = request.GET.get('page', 1)
     
     styles = Style.objects.all()
     
@@ -98,8 +117,13 @@ def style_search(request):
     if category:
         styles = styles.filter(category=category)
     
-    serializer = StyleSerializer(styles, many=True)
-    return Response(serializer.data)
+    # Add pagination
+    paginator = PageNumberPagination()
+    paginator.page_size = 20
+    result_page = paginator.paginate_queryset(styles, request)
+    
+    serializer = StyleSerializer(result_page, many=True)
+    return paginator.get_paginated_response(serializer.data)
 
 @api_view(['GET'])
 @authentication_classes([JWTAuthentication])
@@ -118,4 +142,5 @@ class StyleListView(generics.ListAPIView):
     authentication_classes = [JWTAuthentication]
     permission_classes = [permissions.AllowAny]
     throttle_classes = [AnonRateThrottle, UserRateThrottle]
+    pagination_class = StylePagination 
     
